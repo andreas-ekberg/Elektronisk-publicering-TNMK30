@@ -1,0 +1,853 @@
+/*FOR ALL*/
+
+* {
+    font-family: 'Baloo';
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+    color: rgb(201, 65, 65);
+}
+
+p {
+    font-size: 50px;
+    font-family: 'Arial';
+}
+
+.left-text {
+    text-align: left;
+}
+
+.hide-phone {
+    padding: 2px;
+}
+
+.center {
+    text-align: center;
+}
+
+.img-phone {
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 999px) {
+    .hide-phone {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+/*---------------------------------------------*/
+/*NAV*/
+
+header {
+    width: 100%;
+    height: 249px;
+    background-color: rgb(201, 65, 65);
+    border-bottom: solid 1vw;
+    border-color: rgb(190, 39, 39); /*TEST 236, 76, 100*/
+}
+
+    header .header-logo {
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 70px;
+        color: rgb(4, 4, 4);
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    header nav ul {
+        display: block;
+        margin: 0 auto;
+    }
+
+        header nav ul li {
+            display: inline-block;
+            float: left;
+            list-style: none;
+            padding: 0 20px;
+        }
+
+            header nav ul li a {
+                font-size: 45px;
+                color: rgb(245, 245, 245);
+                text-transform: uppercase;
+            }
+
+/*OBS! ge namn efter vad som står i url
+  ----*/
+#index {
+    color: #ffffff;
+}
+
+#Search {
+    color: #ffffff;
+}
+
+#About {
+    color: #ffffff;
+}
+
+#Use {
+    color: #ffffff;
+}
+/*----*/
+
+nav a:hover {
+    color: rgb(255, 255, 181);
+}
+
+@media only screen and (min-width: 1000px) {
+    header {
+        width: 100%;
+        height: 99px;
+        border-bottom: solid 0.4vw;
+        border-color: rgb(190, 39, 39);
+    }
+
+        header .header-logo {
+            margin: 35px 0;
+            font-weight: 100;
+            font-size: 2vw;
+            text-align: left;
+            line-height: 60px;
+            padding: 0 20px 0 40px;
+            border-right: 0.5vw solid black;
+            float: left;
+        }
+
+        header nav ul {
+            margin: 0;
+            float: left;
+        }
+
+            header nav ul li {
+                display: inline-block;
+                float: left;
+                list-style: none;
+                padding: 0 5.5vw;
+            }
+
+                header nav ul li a {
+                    font-size: 2vw;
+                    color: rgb(245, 245, 245);
+                    text-transform: uppercase;
+                    line-height: 140px;
+                }
+    /*nav hover for pc*/
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        top: 0;
+        transition: all ease-in-out 300ms;
+    }
+
+    nav a:hover::before {
+        background-color: rgb(43, 43, 201);
+    }
+}
+/*---------------------------------------------*/
+/*BODY*/
+/*---------------------------------------------*/
+/*index*/
+
+.red-p {
+    color: rgb(201, 65, 65);
+    font-family: 'Baloo';
+}
+
+.img-banner {
+    width: 100%;
+    height: calc(100vh - 250px - 250px);
+    background-image: url('img/bluee.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.div-search {
+    margin-top: 10vw;
+    margin-left: 4.5vw;
+    width: 90vw;
+    height: 80vw;
+    float: left;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 2vw;
+    border: solid 0.5vw;
+    border-color: rgb(190, 39, 39);
+}
+
+#div-search-header {
+    font-weight: 600;
+    color: rgb(201, 65, 65);
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5vh;
+    margin-top: 1vh;
+}
+
+.div-serch-bar {
+    height: 9vw;
+    width: 60vw;
+    margin-left: 3vw;
+    font-size: 50px;
+    float: left;
+    border-radius: 3vw;
+    border: solid 0.5vw;
+    border-color: rgb(201, 198, 198);
+    outline: none;
+    padding: 0 4vw;
+    font-family: 'Arial';
+}
+
+.div-search-margin {
+    padding-right: 4vw;
+}
+
+.div-search-img {
+    width: 10vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    background-image: url('img/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7vw;
+    outline: none;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-img {
+    padding-top: 1vw;
+    width: 8vw;
+}
+
+.div-search-text {
+    width: 82vw;
+    margin-left: 3vw;
+    margin-top: 4vw;
+    height: 40vw;
+    padding-top: 0;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(190, 39, 39);
+    font-size: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .img-banner {
+        height: calc(100vh - 99px - 109px);
+    }
+
+    #div-search-header {
+        font-size: 2.5vw;
+        padding: 0;
+    }
+
+    .div-search {
+        margin-top: 0.5vw;
+        margin-left: 30vw;
+        width: 40vw;
+        height: 26vw;
+        float: left;
+        border: solid 0.2vw;
+        border-color: rgb(190, 39, 39);
+        font-size: 4vw;
+        box-shadow: 0 6px 12px 3px rgba(0, 0, 0, 0.274);
+    }
+
+    .div-serch-bar {
+        height: 3vw;
+        width: 26vw;
+        margin-left: 3vw;
+        font-size: 1.7vw;
+        float: left;
+        border-radius: 3vw;
+        border: solid 0.2vw;
+        border-color: rgb(201, 198, 198);
+        outline: none;
+        padding: 0 1.2vw;
+    }
+
+    .div-search-margin {
+        padding-right: 1vw;
+    }
+
+    .div-search-img {
+        width: 3.5vw;
+        height: 3.5vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 2vw;
+        cursor: pointer;
+    }
+
+    .search-img {
+        width: 1.8vw;
+    }
+
+    .div-search-text {
+        width: 33vw;
+        margin-left: 3vw;
+        margin-top: 1vw;
+        height: 12vw;
+        padding-top: 0;
+        border: solid 0.2vw;
+        border-radius: 2vw;
+        border-color: rgb(190, 39, 39);
+        font-size: 50px;
+        font-size: 1.5vw;
+    }
+}
+/*---------------------------------------------*/
+/*BODY Use and About*/
+
+.div-use-imgbackground {
+    width: 100%;
+    height: 170vh;
+    background-image: url('img/bluee.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.div-about-imgbackground {
+    width: 100%;
+    height: 220vh;
+    background-image: url('img/bluee.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.div-use-box-and-header {
+    margin: 0 0;
+    background-color: rgba(255, 255, 255);
+    min-height: 220vh;
+    border-right: solid 0.4vw;
+    border-left: solid 0.4vw;
+    border-color: rgb(190, 39, 39);
+    text-align: center;
+}
+
+
+.div-use-text {
+    min-height: 190vh;
+    border-top: solid 0.2vh;
+    border-color: rgb(190, 39, 39);
+    margin: 0 2vw;
+    font-size: 60px;
+    padding-top: 0.4vh;
+}
+
+.div-About-text {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 20vh;
+    background-color: teal;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .div-about-imgbackground {/*And use*/
+        height: 230vh;
+    }
+    .div-use-box-and-header {
+        margin: 0 1vh;
+        min-height: 30vh;
+        background-color: rgba(255, 255, 255, 0.918);
+        border-right: solid 0.2vw;
+        border-left: solid 0.2vw;
+        border-color: rgb(190, 39, 39);
+    }
+
+    .div-use-text {
+        min-height: 220vh;
+        border-top: solid 0.3vh;
+        border-color: rgb(190, 39, 39);
+        margin: 0 4vw;
+        font-size: 40px;
+        padding-top: 1vh;
+    }
+}
+
+/*---------------------------------------------*/
+/*SEARCH*/
+
+#page-error-text{
+    text-align: center;
+}
+
+.div-smal-serch-bar {
+    height: 10vw;
+    width: 60vw;
+    font-size: 50px;
+    float: left;
+    border-radius: 3vw;
+    border: solid 0.5vw;
+    border-color: rgb(201, 198, 198);
+    outline: none;
+    padding: 0 4vw;
+    font-family: 'Times';
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+
+.div-smal-search-img {
+    width: 11vw;
+    height: 11vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    margin-top: 2vh;
+    background-image: url('img/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7vw;
+    outline: none;
+}
+
+.p-ballo-center {
+    font-family: 'Baloo';
+    text-align: center;
+    
+}
+
+.div-smal-search-margin {
+    padding-right: 3vw;
+    margin-left: 4vw;
+    margin-bottom: 2vh;
+}
+
+.search-smal-img {
+    padding-top: 1vw;
+    width: 8vw;
+}
+
+.div-search-output {
+    width: 100%;
+    height: 160vh;
+    background-color: rgb(240, 240, 240);
+    display: table; /*Jätte händig för overflow*/
+}
+
+.div-page-button {
+    width: 11vw;
+    height: 11vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(190, 39, 39);
+    background-color: white;
+    margin-top: 2vh;
+    outline: none;
+    float: left;
+    text-align: center;
+    font-size: 60px;
+}
+
+.locked-div-page-button {
+    width: 11vw;
+    height: 11vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    margin-top: 2vh;
+    outline: none;
+    float: left;
+    text-align: center;
+    font-size: 60px;
+    cursor: default;
+}
+
+#first-div-page-button {
+    margin-left: 16vw;
+}
+
+#page-nr {
+    border-color: white;
+}
+
+a {
+    color: rgb(212, 169, 24);
+    display: block;
+}
+
+.item-img {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+table {
+    background-color: rgb(123, 168, 247);
+    color: white;
+    border-collapse: collapse;
+    width: 94vw;
+    margin-left: 2vw;
+    font-size: 40px;
+}
+
+td, th {
+    border: solid 0.5vw #ffffff;
+    padding-left: 20px;
+    min-height: 10vh;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(255, 255, 255, 0.842);
+    color: black;
+}
+
+.div-more-img {
+    width: 10vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    background-image: url('img/more.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7vw;
+    margin-left: 3vw;
+}
+
+#test {
+    background-color: aqua;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    .div-more-img {
+        width: 3.5vw;
+        height: 3.5vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 6vw;
+    }
+
+    .div-search-output {
+        height: 150vh;
+    }
+
+    .div-smal-serch-bar {
+        height: 2vw;
+        width: 32vw;
+        font-size: 20px;
+        border: solid 0.2vw;
+        border-color: rgb(201, 198, 198);
+        padding: 0 1.2vw;
+        margin-left: 10vw;
+    }
+
+    .div-smal-search-img {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: solid 0.2vw;
+        border-radius: 0.8vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 1.5vw;
+        cursor: pointer;
+    }
+
+    .search-smal-img {
+        padding-top: 1vw;
+        width: 1.8vw;
+        cursor: pointer;
+    }
+
+    .div-smal-search-margin {
+        padding-right: 1vw;
+        margin-left: -94vw;
+        margin-bottom: 2vh;
+    }
+
+    .div-page-button {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: solid 0.2vw;
+        border-radius: 0.8vw;
+        border-color: rgb(190, 39, 39);
+        background-size: 1.5vw;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .locked-div-page-button {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: solid 0.2vw;
+        border-radius: 0.8vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 1.5vw;
+        font-size: 24px;
+    }
+
+    table {
+        width: 94vw;
+        margin-left: 3vw;
+        font-size: 20px;
+    }
+
+    td, th {
+        border: solid 0.2vw #ffffff;
+        padding-left: 20px;
+    }
+
+    #first-div-page-button {
+        margin-left: 41.9vw;
+    }
+}
+
+/*---------------------------------------------*/
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    margin: 0;
+    height: 249px;
+    background-color: rgb(201, 65, 65);
+    border-top: solid 1vw;
+    border-color: rgb(190, 39, 39);
+}
+
+.footer-table {
+    background-color: rgba(0, 0, 0, 0);
+    table-layout: fixed;
+    width: 90vw;
+}
+
+.footer-p {
+    font-size: 24px;
+}
+
+.footer-p-header {
+    font-size: 30px;
+}
+
+.no-border {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#center-copyright {
+    text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+    footer {
+        width: 100%;
+        margin: 0;
+        height: 109px;
+        background-color: rgb(201, 65, 65);
+        border-top: solid 0.4vw;
+        border-color: rgb(190, 39, 39);
+    }
+
+
+    .footer-p {
+        font-size: 12px;
+    }
+
+    .footer-p-header {
+        font-size: 16px;
+    }
+}
+
+/*---------------------------------------------*/
+/*INFO AND INFOCOLOR*/
+.header {
+    text-align: center;
+    color: blue;
+    background-color: red;
+    margin: 100px;
+}
+
+.div-info-margin {
+    height: 6vh;
+}
+
+.div-info-output {
+    min-width: 100%;
+    min-height: 160vh;
+    background-color: rgb(240, 240, 240);
+}
+
+.img-fit {
+    object-fit: contain;
+}
+
+.div-img-info {
+    width: 15vw;
+    padding: 0;
+}
+
+.img-back {
+    width: 10vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    background-image: url('img/back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+.order-button {
+    width: 25vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(190, 39, 39);
+    background-color: white;
+    background-size: 7vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    float: left;
+}
+
+.order-button-not-active {
+    width: 25vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    background-size: 7vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    float: left;
+}
+
+.order-button-first {
+    width: 25vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(190, 39, 39);
+    background-color: white;
+    background-size: 7vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    float: left;
+    margin-bottom: 2vh;
+}
+
+.order-button-not-active-first {
+    width: 25vw;
+    height: 10vw;
+    border: solid 0.5vw;
+    border-radius: 4vw;
+    border-color: rgb(201, 198, 198);
+    background-color: white;
+    background-size: 7vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-left: 10vw;
+    text-align: center;
+    font-size: 3vh;
+    float: left;
+}
+
+@media only screen and (min-width: 1000px) {
+    .img-back {
+        width: 3.5vw;
+        height: 3.5vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 1vw;
+    }
+
+    .order-button {
+        width: 8vw;
+        height: 3vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(190, 39, 39);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 1vw;
+    }
+
+    .order-button-not-active {
+        width: 8vw;
+        height: 3vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 1vw;
+    }
+
+    .order-button-first {
+        width: 8vw;
+        height: 3vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(190, 39, 39);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 69vw;
+    }
+
+    .order-button-not-active-first {
+        width: 8vw;
+        height: 3vw;
+        border: solid 0.2vw;
+        border-radius: 1.2vw;
+        border-color: rgb(201, 198, 198);
+        background-size: 2vw;
+        cursor: pointer;
+        margin-left: 69vw;
+    }
+}
